@@ -15,3 +15,12 @@ Appetency: In our context, appetency is the propensity to buy a new service or a
 Up-selling (Wikipedia definition): Up-selling is a sales technique whereby a salesman attempts to have the customer purchase more expensive items, upgrades, or other add-ons in an attempt to make a more profitable sale. Up-selling usually involves marketing more profitable services or products, but up-selling can also be simply exposing the customer to other options he or she may not have considered previously. 
 
 The data: https://kdd.org/kdd-cup/view/kdd-cup-2009/Data.
+
+Approach 
+X_train only numeric attributes for training 
+X_train with categorical variables with a defined set of cardinality with the attribute
+Cleaning the data: dropping all nan from columns with a specific threshold 
+also drop rows with missing values (KNN can be approached on the next cut) to check for model improvement
+
+fit logistic regression and compare with different tree based model
+
