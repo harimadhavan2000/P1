@@ -1,0 +1,856 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamerposter
+\begin_preamble
+\newcommand{\bottomLeftText}{Vishal S, Hari K,}
+\newcommand{\bottomCenterText}{Prof. Pavlos Protopapass}
+\newcommand{\bottomRightText}{Sumanth C, Chinmay A}
+\newcommand{\posterSize}{a2} % a0,a1,a2
+\newcommand{\nCols}{2} % 2,3
+
+
+\usetheme{Madrid}
+\usepackage[orientation=portrait,size=\posterSize]{beamerposter}
+\usepackage[labelfont={scriptsize,color={darkblue}},font=scriptsize,labelformat=simple]{caption}
+
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster 
+\setbeamertemplate{caption}[numbered]
+
+\setbeamerfont{normal text}{family=helvet}
+\setbeamerfont{local structure}{family=helvet}
+
+\definecolor{lightblue}{rgb}{0.0,0.45,0.81}
+\definecolor{lighterblue}{rgb}{0.415,0.678,0.894}
+\definecolor{darkblue}{rgb}{0,0.243,0.447}
+\definecolor{vdarkblue}{rgb}{0,0.162,0.298}
+
+\setbeamercolor*{author in head/foot}{bg=darkblue}
+\setbeamercolor*{logo in head/foot}{bg=darkblue,fg=white}
+\setbeamercolor*{title in head/foot}{bg=lightblue,fg=vdarkblue}
+\setbeamercolor*{date in head/foot}{bg=darkblue,fg=white}
+\setbeamercolor{title}{bg=darkblue}
+\setbeamercolor{headline}{bg=lightblue,fg=white}
+\setbeamercolor{frametitle}{bg=lightblue,fg=white}
+\setbeamercolor{frametitle}{bg=darkblue}
+\setbeamercolor{under headline}{bg=lighterblue,fg=darkblue}
+\setbeamercolor{footline}{bg=darkblue}
+\setbeamercolor{block title}{bg=lighterblue,fg=vdarkblue}
+\setbeamercolor{lower separation line head}{bg=darkblue}
+
+\setbeamertemplate{bibliography item}{\insertbiblabel}  % Numbered bibliography
+
+%%% Each bibliography entry runs on just 1 line %%%
+\setbeamertemplate{bibliography entry title}{}
+\setbeamertemplate{bibliography entry location}{}
+\setbeamertemplate{bibliography entry note}{}
+
+\setbeamercolor{bibliography item}{fg=black}
+\setbeamercolor*{bibliography entry title}{fg=black}
+\setbeamercolor*{bibliography entry author}{fg=black}
+\setbeamercolor*{bibliography entry location}{fg=black}
+\setbeamercolor*{bibliography entry note}{fg=black}
+
+%%% Equation labels resize according to equation size %%%
+\makeatletter
+\def\maketag@@@#1{\hbox{\m@th#1}}
+\makeatother
+
+%%% Set column width according to number of columns %%%
+\newif\ifThreeCols
+\ifnum \nCols=2
+\newcommand{\colWidth}{.45\paperwidth}
+\ThreeColsfalse
+\else
+\newcommand{\colWidth}{.3\paperwidth}
+\ThreeColstrue
+\fi
+
+
+\newenvironment{fcolumn}
+{
+  \begin{column}[t]{\colWidth}
+}
+{
+  \end{column}
+}
+
+
+\newenvironment{fblock}[1]
+{
+  \begin{block}{#1}
+    \centering
+    \begin{minipage}{0.95\linewidth}
+    \setlength{\parskip}{.005\paperheight}
+}
+{      
+    \end{minipage}
+  \end{block}
+}
+
+
+%%% HEADLINE %%%
+\setbeamertemplate{headline}
+{
+  \leavevmode%
+  \vskip0.015\paperwidth
+  \hskip0.015\paperwidth
+  \hbox
+  {%
+    \begin{beamercolorbox}[wd=.32\paperwidth,ht=.05\paperheight,left]{logo in head/foot}%
+    \vbox to.05\paperheight{\vfil\includegraphics[height=.035\paperheight]{figs/CambridgeLogo}\vfil}%
+    \end{beamercolorbox}%
+    
+    \begin{beamercolorbox}[wd=.33\paperwidth,ht=.05\paperheight,center]{date in head/foot}%
+    % Empty middle box
+    \end{beamercolorbox}%
+    
+    \begin{beamercolorbox}[wd=.32\paperwidth,ht=.05\paperheight,right]{date in head/foot}%%
+    \end{beamercolorbox}%
+  }%
+
+  \hbox
+  {%
+    \hskip0.015\paperwidth
+    \begin{beamercolorbox}[wd=0.97\paperwidth,ht=.05\paperheight,center]{under headline}%
+    \usebeamerfont{title in head/foot}%
+    \vbox to.05\paperheight{\vfil\inserttitle\vfil}%
+    \end{beamercolorbox}%
+  }
+}
+
+
+%%% BLOCK %%%
+\setbeamertemplate{block begin}
+{
+  \begin{beamercolorbox}[ht=.03\paperheight,leftskip=.005\paperwidth]%
+  {block title}%
+  \vbox to.03\paperheight{\vfil\usebeamerfont*{block title}\insertblocktitle\vfil}%
+  \end{beamercolorbox}%
+
+  \usebeamerfont{block body}%
+  \begin{beamercolorbox}[sep=.011\paperwidth]%
+  {block body}%
+}
+\setbeamertemplate{block end}
+{
+  \end{beamercolorbox}
+  \vspace{.01\paperwidth}
+}
+
+
+%%% FOOTER %%%
+\setbeamertemplate{footline}
+{  
+  \leavevmode%
+  \hskip 0.015\paperwidth
+  \hbox
+  {%
+    \begin{beamercolorbox}[wd=.32\paperwidth,ht=.045\paperheight,center]{logo in head/foot}%
+    \vbox to.045\paperheight{\vfil\usebeamerfont{date in head/foot}\bottomLeftText\vfil}%
+    \end{beamercolorbox}%
+    
+    \begin{beamercolorbox}[wd=.33\paperwidth,ht=.045\paperheight,center]{date in head/foot}%%
+    \end{beamercolorbox}%
+    
+    \begin{beamercolorbox}[wd=.32\paperwidth,ht=.045\paperheight,center]{date in head/foot}%
+    \vbox to.042\paperheight{\vfil\usebeamerfont{date in head/foot}\bottomRightText\vfil}%
+    \end{beamercolorbox}%
+  }%
+  \hskip0.015\paperwidth
+  \vskip0.015\paperwidth%
+}
+
+
+%%% Set spacing around equations %%%
+\expandafter\def\expandafter\normalsize\expandafter{%
+    \normalsize
+    \setlength\abovedisplayskip{-5pt}
+    \setlength\belowdisplayskip{5pt}
+    \setlength\abovedisplayshortskip{-5pt}
+    \setlength\belowdisplayshortskip{5pt}
+}
+
+
+%%% Set font sizes according to page size %%%
+\ifnum\pdfstrcmp{\posterSize}{a2}=0
+\setbeamerfont*{caption name}{size=\fontsize{24pt}{28pt}}
+\setbeamerfont*{caption}{size=\fontsize{24pt}{28pt}}
+\setbeamerfont*{block body}{size=\fontsize{20pt}{24pt}}
+\setbeamerfont*{block title}{size=\fontsize{36pt}{40pt}}
+\setbeamerfont*{title in head/foot}{size=\fontsize{40pt}{44pt}}
+\setbeamerfont*{date in head/foot}{size=\fontsize{28pt}{32pt}}
+
+\else \ifnum\pdfstrcmp{\posterSize}{a1}=0
+\setbeamerfont*{caption name}{size=\fontsize{28pt}{32pt}}
+\setbeamerfont*{caption}{size=\fontsize{28pt}{32pt}}
+\setbeamerfont*{block body}{size=\fontsize{24pt}{28pt}}
+\setbeamerfont*{block title}{size=\fontsize{40pt}{44pt}}
+\setbeamerfont*{title in head/foot}{size=\fontsize{48pt}{52pt}}
+\setbeamerfont*{date in head/foot}{size=\fontsize{40pt}{44pt}}
+
+\else
+\setbeamerfont*{caption name}{size=\fontsize{32pt}{36pt}}
+\setbeamerfont*{caption}{size=\fontsize{32pt}{36pt}}
+\setbeamerfont*{block body}{size=\fontsize{28pt}{32pt}}
+\setbeamerfont*{block title}{size=\fontsize{52pt}{56pt}}
+\setbeamerfont*{title in head/foot}{size=\fontsize{80pt}{84pt}}
+\setbeamerfont*{date in head/foot}{size=\fontsize{52pt}{56pt}}
+\fi\fi
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip bigskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Univ.AI AI-1 Final Project: Churn Prediction
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{columns}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{fcolumn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{fblock}{Background}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+We are given a real-life dataset of a telecom operator and tasked to predict
+ the propensity of customers to switch provider (churn), and is a classical
+ classification problem.
+ This problem is important, as churning can cause losses to the operator,
+ and predicting prospective churners can allow the operator to provide incentive
+s against churning, thus reducing loss.
+ Since it is a large dataset, with many variables and NaN data, dealing
+ with it is a challenging yet rewarding problem.
+ We will put four classification models and try to check their performance
+ against a validation set drawn from the train data.
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{fblock}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{fblock}{Logistic Regression with Upsampling}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename C:/Users/munch/Desktop/P1/ROC_for_non_cat_model.png
+	scale 120
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{fblock}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{fblock}{Decision Trees}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename C:/Users/munch/Desktop/DT_ROC.png
+	scale 120
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{fblock}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{fcolumn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{fcolumn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{fblock}{Random Forests with Downsampling}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename C:/Users/munch/Desktop/DT_RF.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{fblock}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{fblock}{Weight-balanced Gradient Boosting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename C:/Users/munch/Desktop/DT_GBC.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{fblock}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{fblock}{Results}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Model with ROC AUC Score
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Model Used
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ROC-AUC Score
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Logistic Regression
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.59
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Decision Trees
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.60
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Random Forest
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.58
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gradient Boosting
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.58
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2009 SOTA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.76
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{fblock}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{fcolumn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{columns}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\end_body
+\end_document
